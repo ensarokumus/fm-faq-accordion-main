@@ -7,6 +7,7 @@ import {
 } from "@mui/material";
 import bgImageDesktop from "./assets/images/background-pattern-desktop.svg";
 import FaqAccordion from "./components/faqAccordion.jsx";
+import starIcon from "./assets/images/icon-star.svg"
 
 function App() {
   const theme = createTheme({
@@ -58,6 +59,18 @@ function App() {
             boxShadow: 'hsla(292, 42%, 14%, 15%) 0px 7px 29px 0px',
           }}
         >
+          <Box sx={{
+            display: 'flex',
+            gap: '1.5rem',
+            alignItems: 'center',
+            marginBottom: '2rem',
+          }}>
+            <img src={starIcon} alt="" />
+            <Typography variant="h2"  component='h1' sx={{
+              fontWeight: 700,
+              color: 'hsl(292, 42%, 14%)',
+            }}>FAQs</Typography>
+          </Box>
           <FaqAccordion sx={{ spacing: 10 }} />
         </Box>
       </Container>
