@@ -6,6 +6,7 @@ import {
   Container,
 } from "@mui/material";
 import bgImageDesktop from "./assets/images/background-pattern-desktop.svg";
+import FaqAccordion from "./components/faqAccordion.jsx";
 
 function App() {
   const theme = createTheme({
@@ -36,7 +37,6 @@ function App() {
           height: "100vh",
         }}
       >
-        {/* <img src={bgImageDesktop} alt="" width={"100%"} height={"25%"} /> */}
         <Box
           sx={{
             height: "30%",
@@ -45,6 +45,12 @@ function App() {
             backgroundSize: "cover",
           }}
         />
+        <Box sx={{
+          position: "absolute",
+          top: "400px",
+        }}>
+          <FaqAccordion/>
+        </Box>
       </Container>
     </ThemeProvider>
   );
