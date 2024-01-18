@@ -1,4 +1,11 @@
-import { Typography, createTheme, ThemeProvider } from "@mui/material";
+import {
+  Typography,
+  createTheme,
+  ThemeProvider,
+  Box,
+  Container,
+} from "@mui/material";
+import bgImageDesktop from "./assets/images/background-pattern-desktop.svg";
 
 function App() {
   const theme = createTheme({
@@ -17,11 +24,28 @@ function App() {
         '"Segoe UI Symbol"',
       ].join(","),
     },
+    spacing: 0,
   });
 
   return (
     <ThemeProvider theme={theme}>
-      <Typography>Hello World!</Typography>
+      <Container
+        maxWidth={false}
+        sx={{
+          backgroundColor: "hsl(275, 100%, 97%)",
+          height: "100vh",
+        }}
+      >
+        {/* <img src={bgImageDesktop} alt="" width={"100%"} height={"25%"} /> */}
+        <Box
+          sx={{
+            height: "30%",
+            backgroundImage: `url(${bgImageDesktop})`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+          }}
+        />
+      </Container>
     </ThemeProvider>
   );
 }
