@@ -16,6 +16,7 @@ const Accordion = styled((props) => (
   "&::before": {
     display: "none",
   },
+  // padding: '1rem'
 }));
 
 const AccordionSummary = styled((props) => (
@@ -24,10 +25,10 @@ const AccordionSummary = styled((props) => (
     {...props}
   />
 ))(({ theme }) => ({
-  backgroundColor:
-    theme.palette.mode === "dark"
-      ? "rgba(255, 255, 255, .05)"
-      : "rgba(0, 0, 0, .03)",
+  // backgroundColor:
+  //   theme.palette.mode === "dark"
+  //     ? "rgba(255, 255, 255, .05)"
+  //     : "rgba(0, 0, 0, .03)",
   flexDirection: "row-reverse",
   "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
     transform: "rotate(90deg)",
@@ -56,7 +57,7 @@ export default function FaqAccordion() {
         onChange={handleChange("panel1")}
       >
         <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
-          <Typography>
+          <Typography variant="h7" component='h2'>
             What is Frontend Mentor, and how will it help me?
           </Typography>
         </AccordionSummary>
