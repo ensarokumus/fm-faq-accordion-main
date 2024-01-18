@@ -45,11 +45,20 @@ function App() {
             backgroundSize: "cover",
           }}
         />
-        <Box sx={{
-          position: "absolute",
-          top: "400px",
-        }}>
-          <FaqAccordion/>
+        <Box
+          sx={{
+            position: "absolute",
+            top: "25%",
+            left: "25%",
+            width: 700,
+            margin: "0 auto",
+            padding: "4rem",
+            backgroundColor: "hsl(0, 0%, 100%)",
+            borderRadius: 5,
+            boxShadow: 'hsla(292, 42%, 14%, 15%) 0px 7px 29px 0px',
+          }}
+        >
+          <FaqAccordion sx={{ spacing: 10 }} />
         </Box>
       </Container>
     </ThemeProvider>
