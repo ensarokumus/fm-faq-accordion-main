@@ -5,6 +5,7 @@ import MuiAccordion from "@mui/material/Accordion";
 import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
+import plusIcon from "../assets/images/icon-plus.svg";
 
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -20,8 +21,9 @@ const Accordion = styled((props) => (
 
 const AccordionSummary = styled((props) => (
   <MuiAccordionSummary
+    // expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />}
+    expandIcon={<img src={plusIcon} alt="" />}
     {...props}
-    expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />}
   />
 ))(({ theme }) => ({
   // backgroundColor:
@@ -29,6 +31,7 @@ const AccordionSummary = styled((props) => (
   //     ? "rgba(255, 255, 255, .05)"
   //     : "rgba(0, 0, 0, .03)",
   flexDirection: "row-reverse",
+  gap: '1rem',
   "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
     transform: "rotate(90deg)",
   },
@@ -40,7 +43,7 @@ const AccordionSummary = styled((props) => (
 }));
 
 const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
-  paddingBottom: '1.5rem',
+  paddingBottom: "1.5rem",
   // borderTop: "1px solid rgba(0, 0, 0, .125)",
 }));
 
@@ -70,12 +73,14 @@ export default function FaqAccordion() {
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography variant="h2"
+          <Typography
+            variant="h2"
             sx={{
               fontSize: "1rem",
               fontWeight: "300",
               color: "hsl(292, 16%, 49%)",
-            }}>
+            }}
+          >
             Frontend Mentor offers realistic coding challenges to help
             developers improve their frontend coding skills with projects in
             HTML, CSS, and JavaScript. It's suitable for all levels and ideal
