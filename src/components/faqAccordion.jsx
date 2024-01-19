@@ -15,7 +15,7 @@ const Accordion = styled((props) => (
   },
   "&::before": {
     display: "none",
-  },
+  },  
   // padding: '1rem'
 }));
 

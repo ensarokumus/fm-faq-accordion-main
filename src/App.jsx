@@ -36,6 +36,7 @@ function App() {
         sx={{
           backgroundColor: "hsl(275, 100%, 97%)",
           height: "100vh",
+          position: "relative",
         }}
       >
         <Box
@@ -49,8 +50,9 @@ function App() {
         <Box
           sx={{
             position: "absolute",
-            top: "25%",
-            left: "25%",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
             width: 700,
             margin: "0 auto",
             padding: "4rem",
