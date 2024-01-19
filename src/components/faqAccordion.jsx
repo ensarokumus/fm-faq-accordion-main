@@ -11,9 +11,6 @@ const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
 ))(({ theme }) => ({
   borderBottom: `1px solid ${theme.palette.divider}`,
-  // "&:not(:last-child)": {
-  //   borderBottom: 0,
-  // },
   "&::before": {
     display: "none",
   },
@@ -26,10 +23,6 @@ const AccordionSummary = styled((props) => (
     {...props}
   />
 ))(({ theme }) => ({
-  // backgroundColor:
-  //   theme.palette.mode === "dark"
-  //     ? "rgba(255, 255, 255, .05)"
-  //     : "rgba(0, 0, 0, .03)",
   flexDirection: "row",
   "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
     transform: "rotate(90deg)",
@@ -43,7 +36,6 @@ const AccordionSummary = styled((props) => (
 
 const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   paddingBottom: "1.5rem",
-  // borderTop: "1px solid rgba(0, 0, 0, .125)",
 }));
 
 export default function FaqAccordion() {
