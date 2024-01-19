@@ -73,7 +73,7 @@ export default function FaqAccordion() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography
-            variant="h2"
+            variant="p"
             sx={{
               fontSize: "1rem",
               fontWeight: "300",
@@ -92,10 +92,26 @@ export default function FaqAccordion() {
         onChange={handleChange("panel2")}
       >
         <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
-          <Typography>Is Frontend Mentor free?</Typography>
+          <Typography
+            variant="h2"
+            sx={{
+              fontSize: "1.2rem",
+              fontWeight: "900",
+              color: "hsl(292, 42%, 14%)",
+            }}
+          >
+            Is Frontend Mentor free?
+          </Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
+          <Typography
+            variant="p"
+            sx={{
+              fontSize: "1rem",
+              fontWeight: "300",
+              color: "hsl(292, 16%, 49%)",
+            }}
+          >
             Yes, Frontend Mentor offers both free and premium coding challenges,
             with the free option providing access to a range of projects
             suitable for all skill levels.
@@ -107,12 +123,26 @@ export default function FaqAccordion() {
         onChange={handleChange("panel3")}
       >
         <AccordionSummary aria-controls="panel3d-content" id="panel3d-header">
-          <Typography>
+          <Typography
+            variant="h2"
+            sx={{
+              fontSize: "1.2rem",
+              fontWeight: "900",
+              color: "hsl(292, 42%, 14%)",
+            }}
+          >
             Can I use Frontend Mentor projects in my portfolio?
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
+          <Typography
+            variant="p"
+            sx={{
+              fontSize: "1rem",
+              fontWeight: "300",
+              color: "hsl(292, 16%, 49%)",
+            }}
+          >
             Yes, you can use projects completed on Frontend Mentor in your
             portfolio. It's an excellent way to showcase your skills to
             potential employers!
@@ -124,12 +154,26 @@ export default function FaqAccordion() {
         onChange={handleChange("panel4")}
       >
         <AccordionSummary aria-controls="panel4d-content" id="panel4d-header">
-          <Typography>
-            How can I get help if I'm stuck on a Frontend Mentor challenge?
+          <Typography
+            variant="h2"
+            sx={{
+              fontSize: "1.2rem",
+              fontWeight: "900",
+              color: "hsl(292, 42%, 14%)",
+            }}
+          >
+            How can I get help if I'm stuck on a challenge?
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
+          <Typography
+            variant="p"
+            sx={{
+              fontSize: "1rem",
+              fontWeight: "300",
+              color: "hsl(292, 16%, 49%)",
+            }}
+          >
             The best place to get help is inside Frontend Mentor's Discord
             community. There's a help channel where you can ask questions and
             seek support from other community members.
