@@ -9,20 +9,19 @@ import Typography from "@mui/material/Typography";
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
 ))(({ theme }) => ({
-  border: `1px solid ${theme.palette.divider}`,
-  "&:not(:last-child)": {
-    borderBottom: 0,
-  },
+  borderBottom: `1px solid ${theme.palette.divider}`,
+  // "&:not(:last-child)": {
+  //   borderBottom: 0,
+  // },
   "&::before": {
     display: "none",
-  },  
-  // padding: '1rem'
+  },
 }));
 
 const AccordionSummary = styled((props) => (
   <MuiAccordionSummary
-    expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />}
     {...props}
+    expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />}
   />
 ))(({ theme }) => ({
   // backgroundColor:
@@ -36,11 +35,13 @@ const AccordionSummary = styled((props) => (
   "& .MuiAccordionSummary-content": {
     marginLeft: theme.spacing(1),
   },
+  marginTop: "1rem",
+  marginBottom: "1rem",
 }));
 
 const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
-  padding: theme.spacing(2),
-  borderTop: "1px solid rgba(0, 0, 0, .125)",
+  paddingBottom: '1.5rem',
+  // borderTop: "1px solid rgba(0, 0, 0, .125)",
 }));
 
 export default function FaqAccordion() {
@@ -57,12 +58,24 @@ export default function FaqAccordion() {
         onChange={handleChange("panel1")}
       >
         <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
-          <Typography variant="h7" component='h2'>
+          <Typography
+            variant="h2"
+            sx={{
+              fontSize: "1.2rem",
+              fontWeight: "900",
+              color: "hsl(292, 42%, 14%)",
+            }}
+          >
             What is Frontend Mentor, and how will it help me?
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
+          <Typography variant="h2"
+            sx={{
+              fontSize: "1rem",
+              fontWeight: "300",
+              color: "hsl(292, 16%, 49%)",
+            }}>
             Frontend Mentor offers realistic coding challenges to help
             developers improve their frontend coding skills with projects in
             HTML, CSS, and JavaScript. It's suitable for all levels and ideal
