@@ -1,11 +1,11 @@
 import * as React from "react";
 import { styled } from "@mui/material/styles";
-import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
 import MuiAccordion from "@mui/material/Accordion";
 import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import plusIcon from "../assets/images/icon-plus.svg";
+import minusIcon from "../assets/images/icon-minus.svg";
 
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -16,23 +16,13 @@ const Accordion = styled((props) => (
   },
 }));
 
-const AccordionSummary = styled((props) => (
-  <MuiAccordionSummary
-    // expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />}
-    expandIcon={<img src={plusIcon} alt="" />}
-    {...props}
-  />
-))(({ theme }) => ({
-  flexDirection: "row",
-  "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
-    transform: "rotate(90deg)",
-  },
-  "& .MuiAccordionSummary-content": {
-    marginLeft: theme.spacing(1),
-  },
-  marginTop: "1rem",
-  marginBottom: "1rem",
-}));
+const AccordionSummary = styled((props) => <MuiAccordionSummary {...props} />)(
+  ({ theme }) => ({
+    flexDirection: "row",
+    marginTop: "1rem",
+    marginBottom: "1rem",
+  })
+);
 
 const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   paddingBottom: "1.5rem",
@@ -51,7 +41,17 @@ export default function FaqAccordion() {
         expanded={expanded === "panel1"}
         onChange={handleChange("panel1")}
       >
-        <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
+        <AccordionSummary
+          aria-controls="panel1d-content"
+          id="panel1d-header"
+          expandIcon={
+            expanded === "panel1" ? (
+              <img src={minusIcon} alt="" />
+            ) : (
+              <img src={plusIcon} alt="" />
+            )
+          }
+        >
           <Typography
             variant="h2"
             sx={{
@@ -83,7 +83,17 @@ export default function FaqAccordion() {
         expanded={expanded === "panel2"}
         onChange={handleChange("panel2")}
       >
-        <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
+        <AccordionSummary
+          aria-controls="panel2d-content"
+          id="panel2d-header"
+          expandIcon={
+            expanded === "panel2" ? (
+              <img src={minusIcon} alt="" />
+            ) : (
+              <img src={plusIcon} alt="" />
+            )
+          }
+        >
           <Typography
             variant="h2"
             sx={{
@@ -114,7 +124,17 @@ export default function FaqAccordion() {
         expanded={expanded === "panel3"}
         onChange={handleChange("panel3")}
       >
-        <AccordionSummary aria-controls="panel3d-content" id="panel3d-header">
+        <AccordionSummary
+          aria-controls="panel3d-content"
+          id="panel3d-header"
+          expandIcon={
+            expanded === "panel3" ? (
+              <img src={minusIcon} alt="" />
+            ) : (
+              <img src={plusIcon} alt="" />
+            )
+          }
+        >
           <Typography
             variant="h2"
             sx={{
@@ -145,7 +165,17 @@ export default function FaqAccordion() {
         expanded={expanded === "panel4"}
         onChange={handleChange("panel4")}
       >
-        <AccordionSummary aria-controls="panel4d-content" id="panel4d-header">
+        <AccordionSummary
+          aria-controls="panel4d-content"
+          id="panel4d-header"
+          expandIcon={
+            expanded === "panel4" ? (
+              <img src={minusIcon} alt="" />
+            ) : (
+              <img src={plusIcon} alt="" />
+            )
+          }
+        >
           <Typography
             variant="h2"
             sx={{
