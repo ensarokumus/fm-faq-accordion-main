@@ -42,7 +42,7 @@ function App() {
         <Box
           sx={{
             height: "30%",
-            backgroundImage: `url(${bgImageDesktop})`,
+            background: `url(${bgImageDesktop})`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
