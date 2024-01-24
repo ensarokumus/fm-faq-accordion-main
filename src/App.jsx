@@ -39,14 +39,7 @@ function App() {
           position: "relative",
         }}
       >
-        <Box
-          sx={{
-            height: "30%",
-            background: `url(${bgImageDesktop})`,
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-          }}
-        />
+        <img src={bgImageDesktop} alt="" />
         <Box
           sx={{
             position: "absolute",
